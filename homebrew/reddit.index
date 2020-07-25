@@ -17,6 +17,7 @@
 		<!-- backgrounds -->
 		<file name="background-bodyguard.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/homebrew/reddit/backgrounds/background-bodyguard.xml" />
 		<file name="background-goat.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/homebrew/reddit/backgrounds/background-goat.xml" />
-		
+		<file name="background-construct.xml" url="https://bitbucket.org/jojobean/elements/raw/58be6e5fc71ba9fef9dcb75d97eee66dc3ac78f2/homebrew/reddit/backgrounds/Background-Construct" />
+
 	</files>
 </index>
