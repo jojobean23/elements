@@ -29,7 +29,7 @@
 			</setters>
 		<rules>
 			<stat name="charisma" value="1" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
-            		<stat name="constitution" value="2" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
 			<stat name="innate speed" value="25" bonus="base"/>
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
@@ -44,17 +44,7 @@
 			<p>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>
 		</description>
 		<sheet action="Action" usage="1/Short Rest">
-			<description>Exhale destructive energy. Your breath weapon does {{breath-weapon:dice count}}d{{breath-weapon:dice size}} slashing damage in a 15ft DC {{breath-weapon:dc}}</description>
+			<description>Exhale destructive energy. Your breath weapon does 2d8 slashing damage in a 15 foot cone, dex save. Dc is 8+con mod+prof</description>
 		</sheet>
-		<rules>
-			<stat name="breath-weapon:dc" value="8" />
-			<stat name="breath-weapon:dc" value="constitution:modifier" />
-			<stat name="breath-weapon:dc" value="proficiency" />
-			<stat name="breath-weapon:dice size" value="6" bonus="dice" />
-			<stat name="breath-weapon:dice count" value="2" level="1" />
-			<stat name="breath-weapon:dice count" value="1" level="6" />
-			<stat name="breath-weapon:dice count" value="1" level="11" />
-			<stat name="breath-weapon:dice count" value="1" level="16" />
-		</rules>
 	</element>
 </elements>
