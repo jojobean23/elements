@@ -25,4 +25,4 @@
             <select type="Proficiency" name="Artisan’s Tool" supports="Artisan tools" />
             </rules>
         </element> 
-	</element>
+	</elements>
