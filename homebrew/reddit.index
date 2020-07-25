@@ -14,6 +14,9 @@
 		<!-- archetypes -->
 		<file name="monk-fourelementsremastered.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/homebrew/reddit/monk-fourelementsremastered.xml" />
 		
+		<!-- races -->
+		<file name="race-dragonbornforged.xml" url="https://raw.githubusercontent.com/jojobean23/elements/master/homebrew/reddit/Races/race-dragonforged.xml" />
+		
 		<!-- backgrounds -->
 		<file name="background-bodyguard.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/homebrew/reddit/backgrounds/background-bodyguard.xml" />
 		<file name="background-goat.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/homebrew/reddit/backgrounds/background-goat.xml" />
