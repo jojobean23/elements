@@ -5,7 +5,7 @@
 		<description>Construct Background</description>
         <author url="http://no.com">Jojo Paku</author>
 		<update version="0.0.6">
-            <file name="background-Construct.xml" url="https://github.com/jojobean23/elements/blob/master/homebrew/reddit/backgrounds/background-construct.xml" />
+            <file name="background-Construct.xml" url="https://raw.githubusercontent.com/jojobean23/elements/master/homebrew/reddit/backgrounds/background-construct.xml" />
 		</update>
 	</info>
     
