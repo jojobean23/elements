@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Dragonforged</name>
+		<update version="0.1.9">
+			<file name="race-dragonforged.xml" url="https://raw.githubusercontent.com/jojobean23/elements/master/homebrew/reddit/races/race-dragonforged.xml" />
+		</update>
+	</info>
+	<element name="Dragonforged" type="Race" source="Homebrew" id="ID_RACE_DRAGONFORGED">
+		<description>
+			<p class="flavor">The warforged were build to fight in the Last War. While the first warforged were mindless automatons, there were countless improvements made to their design that ultimately culminated in sentience. The dragonforged are a new production line of warforged, borne out of the need for stronger soldiers Regular warforged are already created with a blend of organic and inorganic materials, dragonforged simply have the addition of dragonscales to their recipe. In addition, dragonforged design sees a larger focus on the inclusion of metal plating.</p>
+			<h4>Dragonforged TRAITS</h4>
+			<p>Your dragonforged character has the following traits.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong>Your Constitution score increase by 2, and your Charisma score increases by 1</p>
+			<p class="indent"><strong><em>Age.</em></strong>A typical warforged is between between two and thirty years old, however the dragonforged line is much younger, averaging at around 6 months. The maximum warforged lifespan remains a mystery; so far, warforged have shown no signs of deterioration due to age. You are immune to magical aging effects.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Most warforged take comfort in order and discipline, tending toward law and neutrality. In contrast, the dragonborn that this line takes its inspiration from tend to extremes, often making a conscious choice for one side or the other in the cosmic war between good and evil As a result, dragonforged are usually lawful in nature, but never neutral</p>
+			<p class="indent"><strong><em>Size.</em></strong>Dragonforged, much like regular dragonborn, are taller and heavier than humans, standing well over 6 feet tall and averaging a hefty 380 pounds. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong>Your base walking speed is 25 feet.</p>
+			<p class="indent"><strong><em>Constructed Resilience.</em></strong>You were created to have remarkable fortitude, represented by the following benefits: • You have advantage on saving throws against being poisoned, and you have resistance to poison damage. • You don't need to eat, drink, or breathe. • You are immune to disease. • You don't need to sleep, and magic can't put you to sleep.</p>
+			<p class="indent"><strong><em>Sentries Rest.</em></strong>When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn't render you unconscious, and you can see and hear as normal</p>
+			<p class="indent"><strong><em>Integrated Protection.</em></strong>Your body has built-in defensive layers, which can be enhanced with armor: • You have resistance to slashing damage. • You can don only armor with which you have proficiency. To don armor, you must incorporate it into your body over the course of 1 hour, during which you remain in contact with the armor. To doff armor, you must spend 1 hour removing it. You can rest while donning or doffing armor in this way. • While you live, your armor can't be removed from your body against your will </p>
+			<p class="indent"><strong><em>Night Sight.</em></strong>Designed to be superior to the dragonborn you are modeled after, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+            <p class="indent"><strong><em>Languages.</em></strong>You can speak, read, and write Common, and Draconic</p>
+            <p class-"indent"><strong><em>Breath Weapon.</em></p> You can use your action to exhale shards of metal When you use your breath weapon, each creature in the area of the exhalation must make a Dexterity saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d8 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d8 at 6th level 4d8 at 11th level, and 5d8 at 16th level After you use your breath weapon, you can't use it again until you complete a short or long rest. Dragon Damage Type Breath Weapon Metal Slashing 15 ft. cone (Dex. save).</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="height" modifier="2d8">4'9"</set>
+			<set name="weight" modifier="2d4">110 lb.</set>
+		</setters>
+		<rules>
+			<stat name="charisma" value="1" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
+            <stat name="constitution" value="2" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_INTERNAL_GRANTS_DRAGONMARK"/>
+			<stat name="innate speed" value="25" bonus="base"/>
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_DRACONIC" />
+			<select type="Language" name="Language (Dragonforged)" supports="Standard||Exotic" requirements="!ID_WOTC_WGTE_GRANTS_DARKMARKED"/>
+		</rules>
+	</element>
+	<element name="Breath Weapon" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_BREATH_WEAPON">
+		<description>
+			<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.</p>
+			<p>When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.</p>
+			<p>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>
+		</description>
+		<sheet action="Action" usage="1/Short Rest">
+			<description>Exhale destructive energy. Your breath weapon does {{breath-weapon:dice count}}d{{breath-weapon:dice size}} {{draconic-ancestry:damage type}} damage in a {{draconic-ancestry:breath}} DC {{breath-weapon:dc}}</description>
+		</sheet>
+		<rules>
+			<stat name="breath-weapon:dc" value="8" />
+			<stat name="breath-weapon:dc" value="constitution:modifier" />
+			<stat name="breath-weapon:dc" value="proficiency" />
+			<stat name="breath-weapon:dice size" value="6" bonus="dice" />
+			<stat name="breath-weapon:dice count" value="2" level="1" />
+			<stat name="breath-weapon:dice count" value="1" level="6" />
+			<stat name="breath-weapon:dice count" value="1" level="11" />
+			<stat name="breath-weapon:dice count" value="1" level="16" />
+		</rules>
+	</element>
+</elements>
