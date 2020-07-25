@@ -45,7 +45,7 @@
 			<p>After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>
 		</description>
 		<sheet action="Action" usage="1/Short Rest">
-			<description>Exhale destructive energy. Your breath weapon does {{breath-weapon:dice count}}d{{breath-weapon:dice size}} {{draconic-ancestry:damage type}} damage in a {{draconic-ancestry:breath}} DC {{breath-weapon:dc}}</description>
+			<description>Exhale destructive energy. Your breath weapon does {{breath-weapon:dice count}}d{{breath-weapon:dice size}} slashing damage in a 15ft DC {{breath-weapon:dc}}</description>
 		</sheet>
 		<rules>
 			<stat name="breath-weapon:dc" value="8" />
